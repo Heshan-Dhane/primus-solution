@@ -1,9 +1,3 @@
-/* ─────────────────────────────────────────────
-   PRIMUS SOLUTIONS — style.css
-   Dark premium aesthetic | Syne + DM Sans
-───────────────────────────────────────────── */
-
-/* ── CSS Variables ── */
 :root {
     --bg:          #0a0a0a;
     --bg-2:        #111111;
@@ -1115,12 +1109,7 @@ a.contact-method:hover { border-color: var(--border-hover); transform: translate
 
 /* ════════════════════════════════
    UNAVAILABLE SERVICE BADGE
-   ─────────────────────────────────
-   To restore a service:
-     1. In index.html → remove data-unavailable="true" from the .service-card
-     2. In index.html → remove the "disabled" attribute from the <option> in the contact form
-   To mark a service unavailable again, reverse both steps.
-════════════════════════════════ */
+   ───────────────────────────────── */
 .badge-unavailable {
     display: inline-block;
     font-family: var(--font-body);
@@ -1164,12 +1153,9 @@ a.contact-method:hover { border-color: var(--border-hover); transform: translate
 
 /* ════════════════════════════════
    STICKY NOTE
-   ─────────────────────────────────
-   To change paper color: edit --sticky-color
-   To hide entirely:      add display:none to #stickyNote in index.html
-════════════════════════════════ */
+   ─────────────────────────────────*/
 #stickyNote {
-    --sticky-color: #87b4f8;   /* ← change this for a different paper color */
+    --sticky-color: #87b4f8; 
     --sticky-text:  #00072d;
  
     position: fixed;
@@ -1308,4 +1294,34 @@ a.contact-method:hover { border-color: var(--border-hover); transform: translate
 /* Mobile: slightly smaller */
 @media (max-width: 480px) {
     .sticky-paper { width: 200px; padding: 36px 16px 20px; }
+}
+/* ════════════════════════════════
+   PRICING LOCKED STATE
+   ─────────────────────────────────*/
+.pricing-lock-banner {
+    background: rgba(79, 142, 247, 0.08);
+    border: 1px solid rgba(79, 142, 247, 0.25);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 36px;
+    line-height: 1.6;
+}
+.pricing-lock-banner a { color: var(--accent); border-bottom: 1px solid rgba(79,142,247,0.3); }
+ 
+.pricing-card[data-locked="true"] {
+    opacity: 0.55;
+    filter: grayscale(0.3);
+}
+.btn-locked {
+    width: 100%;
+    cursor: not-allowed !important;
+    opacity: 0.5;
+}
+.disabled-link {
+  pointer-events: none;
+  cursor: not-allowed;  
+  opacity: 0.6;         
 }
