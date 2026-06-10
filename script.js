@@ -1,7 +1,3 @@
-/* ─────────────────────────────────────────────
-   PRIMUS SOLUTIONS — script.js
-───────────────────────────────────────────── */
-
 // ── Header scroll effect ──
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
